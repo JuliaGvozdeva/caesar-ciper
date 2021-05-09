@@ -4,10 +4,10 @@ const getOptions = () => {
     const program = new Command();
 
     program
-    .option('-s, --shift <type>')
-    .option('-a, --action <type>')
-    .option('-i, --input <type>')
-    .option('-o, --output <type>')
+    .option('-s, --shift [number]', 'shift size', 0)
+    .option('-a, --action [action]', 'action')
+    .option('-i, --input [file]', 'input file')
+    .option('-o, --output [file]', 'output file')
     .parse();
 
     program.parse(process.argv);
