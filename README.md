@@ -21,6 +21,8 @@
 `npm install`,
 
 7. Use comands for run this project:
+The Action and Offset fields are required. Also you can add arguments with the input output file. You can write data for encoding/decoding functions in the console line if you don't write the input file path. The result of the encoding / decoding function is displayed in the console line if you do not specify the path to the output file.
+
 `Example: node app.js -a encode -s 7 -i "./input.txt" -o "./output.txt"`
  - `-s, --shift: a shift `
  - `-i, --input: an input file`
