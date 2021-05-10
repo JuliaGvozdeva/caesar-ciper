@@ -4,13 +4,9 @@ import { getOptions } from './utils/getOptiopns.js';
 import {createReadbleStream} from './utils/readStream.js';
 import {createWritebleStream} from './utils/writeStream.js';
 import {pipeline} from 'stream';
-import { error } from 'console';
 
 const options = getOptions();
-
-if (!checkErrors(options)) {
-    process.exit();
-}
+checkErrors(options);
 
 const readInput = createReadbleStream(options.input);
 const transformData = caesarFunc(options);
