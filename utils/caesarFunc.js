@@ -1,9 +1,8 @@
-import fs from 'fs';
 import {Transform} from 'stream';
 
 const ALPH  = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-const caesarFunc = (options) => {
+export function caesarFunc(options) {
     const shift = +options.shift;
     const action = options.action;
 
@@ -17,25 +16,6 @@ const caesarFunc = (options) => {
         }
     });
 }
-    
-//     try {
-//         let outputData = '';
-//         if (inputPath) {
-//             checkFile(inputPath);
-//             data = fs.readFileSync(inputPath, 'utf-8');
-//             outputData = action === 'encode' ? encode(data, shift, alph) : decode(data, shift, alph);
-//             writeEncodeValue(outputPath, outputData);
-//         } else {
-//             process.stdin.on('data', data => {
-//                 outputData = action === 'encode' ? encode(data.toString(), shift, alph) : decode(data.toString(), shift, alph);
-//                 writeEncodeValue(outputPath, outputData);
-//             });
-//         }
-       
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }
 
 function encode(data, shift) {
     let encodeData = '';
@@ -61,15 +41,4 @@ function decode(data, shift) {
 
 function mod(x, m) {
     return (x % m + m) % m;
-  }
-
-// function writeEncodeValue(outputPath, data) {
-//     if (outputPath) {
-//         checkFile(outputPath);
-//         fs.writeFileSync(outputPath, data);
-//     } else {
-//         console.log(data);
-//     }
-// }
-
-export {caesarFunc}
+}
