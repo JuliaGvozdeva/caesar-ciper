@@ -1,5 +1,11 @@
 import {createWriteStream} from 'fs';
+import { checkFile } from '../checkErrors.js';
 
 export function createWritebleStream(output) {
-    return output ? createWriteStream(output) : process.stdout;
+    if (output) {
+        checkFile(output);
+        return createWriteStream(output);
+    } else {
+        return  process.stdout;
+    }
 }

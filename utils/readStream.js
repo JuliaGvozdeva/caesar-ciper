@@ -1,5 +1,11 @@
 import {createReadStream} from 'fs';
+import { checkFile } from '../checkErrors.js';
 
 export function createReadbleStream(input) {
-    return input ? createReadStream(input) : process.stdin;
+    if (input) {
+        checkFile(input);
+        return createReadStream(input);
+    } else {
+        return  process.stdin;
+    }
 }
