@@ -1,4 +1,4 @@
-import {Transform} from 'stream';
+import { Transform } from 'stream';
 
 const ALPH  = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 

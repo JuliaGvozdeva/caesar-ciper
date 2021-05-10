@@ -1,4 +1,4 @@
-import {createReadStream} from 'fs';
+import { createReadStream } from 'fs';
 import { checkFile } from '../checkErrors.js';
 
 export function createReadbleStream(input) {

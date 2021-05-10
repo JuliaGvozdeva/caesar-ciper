@@ -1,4 +1,4 @@
-import {createWriteStream} from 'fs';
+import { createWriteStream } from 'fs';
 import { checkFile } from '../checkErrors.js';
 
 export function createWritebleStream(output) {

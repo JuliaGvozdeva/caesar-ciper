@@ -1,9 +1,9 @@
 import { caesarFunc } from './utils/caesarFunc.js';
 import { checkErrors } from './checkErrors.js';
 import { getOptions } from './utils/getOptiopns.js';
-import {createReadbleStream} from './utils/readStream.js';
-import {createWritebleStream} from './utils/writeStream.js';
-import {pipeline} from 'stream';
+import { createReadbleStream } from './utils/readStream.js';
+import { createWritebleStream } from './utils/writeStream.js';
+import { pipeline } from 'stream';
 
 const options = getOptions();
 checkErrors(options);
