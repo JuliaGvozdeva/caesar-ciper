@@ -11,7 +11,6 @@ export function caesarFunc(options) {
             const data = chunk.toString();
             const codeData = action === 'encode' ? encode(data, shift) : decode(data, shift);
             this.push(codeData);
-            this.push('\n');
             callback();
         }
     });

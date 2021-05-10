@@ -4,7 +4,7 @@ const getOptions = () => {
     const program = new Command();
 
     program
-    .option('-s, --shift [number]', 'shift size', 0)
+    .option('-s, --shift <value>', 'shift size', 0)
     .option('-a, --action [action]', 'action')
     .option('-i, --input [file]', 'input file')
     .option('-o, --output [file]', 'output file')
